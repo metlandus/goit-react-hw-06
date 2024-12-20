@@ -5,7 +5,7 @@ import SearchBox from './Components/SearchBox';
 import ContactList from './Components/ContactList';
 import { addContact } from './Redux/contactsSlice';
 import { changeFilter } from './Redux/filtersSlice';
-import styles from './App.module.css';
+import './App.css';
 
 const App = () => {
     const dispatch = useDispatch();
@@ -25,10 +25,10 @@ const App = () => {
     );
 
     return (
-        <div className={styles.container}>
-            <h1 className={styles.title}>Phonebook</h1>
+        <div className="container">
+            <h1 className="title">Phonebook</h1>
             <ContactForm onAddContact={handleAddContact} />
-            <SearchBox inputValue={searchValue} handleChange={handleSearchChange} className={styles.searchBox} />
+            <SearchBox inputValue={searchValue} handleChange={handleSearchChange} className="searchBox" />
             <ContactList contacts={filteredContacts} />
         </div>
     );
